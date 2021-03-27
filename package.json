@@ -4,12 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "start": "npm run start-redis && nodemon index.js ",
+    "start-redis": "redis-server --daemonize yes"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "hex-to-binary": "^1.0.1",
+    "nodemon": "^2.0.7",
+    "pubnub": "^4.21.6",
+    "redis": "^3.0.2"
   }
 }
